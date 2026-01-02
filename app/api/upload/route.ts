@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
 import { s3 } from "@/lib/s3";
+import { prisma } from "@/lib/prisma";
 
 export async function POST(req: Request) {
   const formData = await req.formData();
@@ -28,6 +29,13 @@ export async function POST(req: Request) {
 
   return NextResponse.json({
     url: url,
-    // key: fileKey, // 👈 VERY IMPORTANT
     });
+}
+
+export async function GET() {
+  const products = await prisma.product.findMany({
+    orderBy: { id: "asc" },
+  });
+
+  return Response.json(products);
 }

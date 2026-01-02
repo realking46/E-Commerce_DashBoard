@@ -5,7 +5,6 @@ import AddProductForm from "./AddProductForm";
 import DeleteButton from "./DeleteButton";
 import EditProductForm from "./EditProductForm";
 
-
 type Product = {
   id: string;
   name: string;
