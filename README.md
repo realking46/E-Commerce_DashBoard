@@ -103,7 +103,7 @@ Open http://localhost:3000/dashboard to see the dashboard.
 4. Deploy and visit the production URL.
 
 ## Folder structure
-├── app
+├── app              
 │   ├── dashboard
 │   │   ├── DashboardUI.tsx
 │   │   ├── ProductChart.tsx
