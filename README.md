@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SSR E-commerce Product Management Dashboard
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-16.1.1-black?logo=next.js)
+![Prisma](https://img.shields.io/badge/Prisma-6.19.1-blue?logo=prisma)
+![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)
+![Vercel](https://img.shields.io/badge/Deployment-Vercel-black?logo=vercel)
 
-First, run the development server:
+## Project Overview
 
+This project is a **server-side rendered (SSR) admin dashboard** for managing products in an e-commerce system.  
+It allows administrators to **create, read, update, and delete products**, manage stock, and visualize product metrics via interactive charts. The application leverages **Next.js SSR**, **Prisma ORM**, and **AWS S3** for secure image uploads.  
+
+The SSR approach ensures **fast page load times**, **better SEO**, and improved performance compared to client-rendered dashboards.
+
+---
+
+## Key Features
+
+- **Server-Side Rendering** with Next.js for fast loading and SEO  
+- **Product Management (CRUD)**: Add, Edit, Delete products with image support  
+- **Secure Image Upload** to AWS S3  
+- **Dynamic Product Charts** showing stock levels and metrics  
+- **Form Validation** using Zod  
+- **Instant UI Updates** without refreshing the page  
+- **Responsive Layout** for mobile and desktop  
+
+---
+
+## Tech Stack
+
+| Layer                 | Technology                                  |
+|-----------------------|---------------------------------------------|
+| Frontend & Backend    | Next.js (App Router, SSR)                  |
+| Database              | PostgreSQL (Neon DB)                        |
+| ORM                   | Prisma                                      |
+| Form Validation       | Zod                                         |
+| Image Storage         | AWS S3                                      |
+| Data Visualization    | Recharts                                    |
+| Deployment            | Vercel                                      |
+
+---
+
+## Screenshots
+
+<!-- Replace with your own screenshots -->
+![Dashboard Screenshot](screenshots/dashboard.png)
+![Add Product Screenshot](screenshots/add-product.png)
+![Edit Product Screenshot](screenshots/edit-product.png)
+
+---
+
+## Getting Started (Local Development)
+
+### Prerequisites
+
+- Node.js >= 18
+- npm >= 8
+- PostgreSQL / Neon DB account
+- AWS S3 bucket for image storage
+
+### Setup
+
+1. **Clone the repository**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/E-Commerce_DashBoard.git
+cd E-Commerce_DashBoard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Dependencies**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Configure environment variables**
+Create a .env file in the root directory:
+```bash
+DATABASE_URL="postgresql://username:password@host:port/dbname?schema=public"
+AWS_ACCESS_KEY_ID="your_aws_access_key"
+AWS_SECRET_ACCESS_KEY="your_aws_secret_key"
+AWS_BUCKET_NAME="your_bucket_name"
+```
+4. **Push prisma Schema to database**
+```bash
+npx prisma db push
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. **Run the development server**
+```bash
+npm run dev
+```
+Open http://localhost:3000/dashboard to see the dashboard.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment (Vercel + Neon + AWS S3)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Push your code to GitHub.
+2. Connect the repository to Vercel
+3. Add the environment variables in Vercel dashboard:
+        DATABASE_URL → Neon DB URL
+        AWS_ACCESS_KEY_ID
+        AWS_SECRET_ACCESS_KEY
+        AWS_BUCKET_NAME
+4. Deploy and visit the production URL.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Folder structure
+├── app
+│   ├── dashboard
+│   │   ├── DashboardUI.tsx
+│   │   ├── ProductChart.tsx
+│   │   ├── AddProductForm.tsx
+│   │   └── EditProductForm.tsx
+├── lib
+│   ├── prisma.ts
+│   ├── s3.ts
+│   └── validators
+│       └── product.ts
+├── prisma
+│   └── schema.prisma
+├── pages/api
+│   └── upload.ts
+├── public
+├── .env
+└── package.json
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Add Product: Fill out the form, upload an image, and submit.
+2. Edit Product: Click edit on any product row, update fields or image, save changes.
+3. Delete Product: Click delete on a product row to remove it.
+4. View Charts: The dashboard charts dynamically reflect stock levels.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Demo Video
+
