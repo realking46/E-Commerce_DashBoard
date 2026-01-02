@@ -74,7 +74,7 @@ npm install
 3. **Configure environment variables**
 Create a .env file in the root directory:
 ```bash
-DATABASE_URL="postgresql://username:password@host:port/dbname?schema=public"
+DATABASE_URL="postgresql://<username>:<password>@<host>:<port>/<dbname>?schema=public"
 AWS_ACCESS_KEY_ID="your_aws_access_key"
 AWS_SECRET_ACCESS_KEY="your_aws_secret_key"
 AWS_BUCKET_NAME="your_bucket_name"
