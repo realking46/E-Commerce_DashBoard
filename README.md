@@ -48,6 +48,12 @@ The SSR approach ensures **fast page load times**, **better SEO**, and improved 
 ![Edit Product Screenshot](screenshots/editform.png)
 
 ---
+## Deployment
+1. use the vercel deployed version
+2. Make a local Deployment.
+
+## Vercel Deployment
+https://ecommerce-dashboard-jixrhpig4-nishant-singhs-projects-b6b38f56.vercel.app?_vercel_share=Yd0WhnTORxx89BVIBsalVa2QOYPozmZa
 
 ## Getting Started (Local Development)
 
