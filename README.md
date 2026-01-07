@@ -94,7 +94,7 @@ npx prisma db push
 ```bash
 npm run dev
 ```
-Open http://localhost:3000/dashboard to see the dashboard.
+Open http://localhost:3000 to see the dashboard.
 
 
 ## Deployment (Vercel + Neon + AWS S3)
