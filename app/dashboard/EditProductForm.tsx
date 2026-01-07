@@ -167,7 +167,7 @@ export default function EditProductForm({ product, onClose  }: Props) {
           <img
             src={imageUrl}
             alt="Preview"
-            className="h-16 w-16 rounded-lg object-cover border"
+            className="h-16 w-16 rounded-lg object-contain bg-white border"
           />
           <span className="text-xs text-gray-500">
             {isUploading ? "Uploading..." : "Current image"}

@@ -122,6 +122,7 @@ Open http://localhost:3000/dashboard to see the dashboard.
 ├── .env
 └── package.json
 
+
 ## Usage
 
 1. Add Product: Fill out the form, upload an image, and submit.

@@ -40,7 +40,7 @@ export default function DashboardUI({ products }: { products: Product[] }) {
                 <img
                     src={p.imageUrl || "/placeholder.png"}
                     alt={p.name}
-                    className="h-20 w-20 rounded-lg object-cover border"
+                    className="h-20 w-20 rounded-lg object-contain border"
                 />
 
                 {/* INFO */}
