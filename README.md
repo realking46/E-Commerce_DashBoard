@@ -43,11 +43,17 @@ The SSR approach ensures **fast page load times**, **better SEO**, and improved 
 ## Screenshots
 
 <!-- Replace with your own screenshots -->
-![Dashboard Screenshot](screenshots/dashboard.png)
-![Add Product Screenshot](screenshots/add-product.png)
-![Edit Product Screenshot](screenshots/edit-product.png)
+![Dashboard Screenshot](screenshots/Dashboard.png)
+![Add Product Screenshot](screenshots/Addproduct.png)
+![Edit Product Screenshot](screenshots/editform.png)
 
 ---
+## Deployment
+1. use the vercel deployed version
+2. Make a local Deployment.
+
+## Vercel Deployment
+https://ecommerce-dashboard-jixrhpig4-nishant-singhs-projects-b6b38f56.vercel.app?_vercel_share=Yd0WhnTORxx89BVIBsalVa2QOYPozmZa
 
 ## Getting Started (Local Development)
 
@@ -74,7 +80,7 @@ npm install
 3. **Configure environment variables**
 Create a .env file in the root directory:
 ```bash
-DATABASE_URL="postgresql://username:password@host:port/dbname?schema=public"
+DATABASE_URL="postgresql://<username>:<password>@<host>:<port>/<dbname>?schema=public"
 AWS_ACCESS_KEY_ID="your_aws_access_key"
 AWS_SECRET_ACCESS_KEY="your_aws_secret_key"
 AWS_BUCKET_NAME="your_bucket_name"
@@ -103,7 +109,7 @@ Open http://localhost:3000/dashboard to see the dashboard.
 4. Deploy and visit the production URL.
 
 ## Folder structure
-├── app
+├── app              
 │   ├── dashboard
 │   │   ├── DashboardUI.tsx
 │   │   ├── ProductChart.tsx
@@ -122,7 +128,6 @@ Open http://localhost:3000/dashboard to see the dashboard.
 ├── .env
 └── package.json
 
-
 ## Usage
 
 1. Add Product: Fill out the form, upload an image, and submit.
@@ -131,4 +136,4 @@ Open http://localhost:3000/dashboard to see the dashboard.
 4. View Charts: The dashboard charts dynamically reflect stock levels.
 
 ## Demo Video
-
+https://drive.google.com/drive/folders/1AWpi1PZxwzZI3b29YGuSUW7wpur_U2_t?usp=drive_link

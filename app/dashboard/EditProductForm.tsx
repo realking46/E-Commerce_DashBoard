@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { updateProduct } from "@/app/dashboard/actions";
-// import { productSchema } from "./product.schema";
-
 
 type Product = {
   id: string;
@@ -27,10 +25,7 @@ export default function EditProductForm({ product, onClose  }: Props) {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState(product.imageUrl);
   const [isUploading, setIsUploading] = useState(false);
-  // const [imageKey, setImageKey] = useState<string | null>(product.imageKey);
 
-
-  // 🔁 Load existing product data into form
   useEffect(() => {
     setName(product.name);
     setDescription(product.description);
