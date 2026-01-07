@@ -136,4 +136,4 @@ Open http://localhost:3000/dashboard to see the dashboard.
 4. View Charts: The dashboard charts dynamically reflect stock levels.
 
 ## Demo Video
-[https://drive.google.com/file/d/1EXPgNin1RIBsHQZhY6GXFmO1lLdOLclH/view?usp=drive_link](https://drive.google.com/drive/folders/1AWpi1PZxwzZI3b29YGuSUW7wpur_U2_t?usp=sharing)
+https://drive.google.com/drive/folders/1AWpi1PZxwzZI3b29YGuSUW7wpur_U2_t?usp=drive_link
