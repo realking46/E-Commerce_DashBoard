@@ -47,6 +47,7 @@ The SSR approach ensures **fast page load times**, **better SEO**, and improved 
 ![Add Product Screenshot](screenshots/Addproduct.png)
 ![Edit Product Screenshot](screenshots/editform.png)
 ![Admin Login Screenshot](screenshots/Admin_Login.png)
+![AWS S3 Bucket Screenshot](screenshots/AWS.png)
 
 ---
 ## Deployment
